@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pygrammers</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link style="height: 30px;" rel="icon" type="image" href="data:image/png;base64,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" >
+  </head>
+<body>
+    <header>
+       
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand"  href="images/buildlogo.png "> <img src=https://lh3.googleusercontent.com/waXhhNDw8xka3w1dNbhPrSFLP8jjzjESOwsINRNlxsuuz2Jcl60mxaiQT8cvgimZqHgsp2vTu7Fvhuo=w1366-h657 width="90px" height="40px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav mr-auto"></ul>
+              <div class="navbar-nav">
+                
+                <a class="nav-item nav-link active" href="#home-section">Home<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#register-section">Register</a>
+                <a class="nav-item nav-link" href="#mentor-section">Mentors</a>
+                <a class="nav-item nav-link" href="#footer-section">Participate</a>
+               
+              </div>
+            </div>
+          </nav>
+          
+    </header>
+    <section id="home-section">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="https://lh3.googleusercontent.com/BtcX4SUwals5lhXMNJBolFQlwrWMDYnfaSxlbTX9oxBGLdbAKJg1l_NW_obXLZU6UWtJizpm6gOavyM=w1366-h657" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="https://lh3.googleusercontent.com/fBm3U9z00jeMz71HhtzoVFWmK8YJd3etjEcA506jnpjUHMirQqbL-mdwCrGWV6uQ7UUTu07txocgKjg=w1366-h657" alt="Second slide">
+              </div>
+            
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+           <h4 style="text-align: center;" >Join us</h4>
+           <p style="text-align: center;">Pygrammers is a community of python enthusiasts with similar ideologies and interest.</p>
+           <div class="container text-center">
+            <a style="background-color: blue;" href="https://web.telegram.org/z/" class="btn btn-info" role="button">Telegram</a>
+          
+          </div>
+    </section>
+    <section style="position: relative; display: flex; justify-content:center;" id="register-section" >
+        <form class="justify-content-center" style="border: solid grey; align-content: center; border-width: 1px; padding: 10px; margin: 60px; width: 600px; height: 700px;">
+            <h1 style="text-align: center;">Form:</h1>
+            <div class="form-row">
+              <div class="form-group col-12">
+              <div style="text-align: center;" class="form-group col-md-12 ">
+                  <label  for="inputname4">Name</label>
+                  <input type="text" class="form-control" id="inputname4">
+    
+              </div>
+              <div style="text-align: center;" class="form-group col-md-12">
+                <label style="text-align: center;" for="inputNumber4">Mobile Number</label>
+                <input type="number" class="form-control" id="inputNumber4" >
+              </div>
+            </div> 
+            <div style="text-align: center;" class="form-group col-md-12">
+            <label style="text-align: center;" for="inputEmail4">Email address</label>
+            <input type="email" class="form-control" id="inputEmail4" >
+          </div>
+            <div style="text-align: center;" class="form-group col-md-12">
+              <label for="inputname4">Company/Instituition name</label>
+              <input type="text" class="form-control" id="inputname4">
+            </div>
+            <div class="form-group col-md-12">
+                <label for="inputfile">Upload a short video or image of hand written sheet showing your interest to join build.myweb</label>
+            <input type="file" class="form-control" id="inputfile">
+            </div>
+              <div class="form-group col-md-12">
+                <label  for="inputchoice"></label>
+                <select id="inputchoice" class="form-control" >
+                
+                  <option selected>Have you attended any events bt Pygrammers before?</option>
+                  <option>Yes </option>
+                  <option>No</option>
+                </select>
+              </div>
+              
+            </div>
+            
+            </div>
+            <button style="margin: auto; display: block; background-color: gray;" type="submit form" class="btn btn-primary">Submit form</button>
+          </form>
+
+    </section>
+<section class="p-5 col-12" id="mentor-section">
+    <h3 class="bg-light" style="text-align: center; ">Mentors</h3> 
+    <div class="row">
+       
+        <div class="bg-light justify-content-center">
+            <div class="card-deck bg-light " >
+                <div class="card bg-light" style="width: 25em; border: none;">
+                  <img src="https://s3.amazonaws.com/utep-uploads/wp-content/uploads/sparkle-box/2021/05/10102450/Mentor-mentee-500x281.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                  
+                </div>
+                <div class="card bg-light" style="width: 25em; border: none;">
+                  <img src="https://s3.amazonaws.com/utep-uploads/wp-content/uploads/sparkle-box/2021/05/10102450/Mentor-mentee-500x281.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+                <div class="card bg-light" style="width: 25em;border: none;">
+                  <img src="https://s3.amazonaws.com/utep-uploads/wp-content/uploads/sparkle-box/2021/05/10102450/Mentor-mentee-500x281.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                 
+                  </div>
+                </div>
+              </div>
+        <p>
+            <div class="card-deck bg-light" >
+                <div class="card bg-light" style="width: 25em; border: none;">
+                  <img src="https://s3.amazonaws.com/utep-uploads/wp-content/uploads/sparkle-box/2021/05/10102450/Mentor-mentee-500x281.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                  
+                </div>
+                <div class="card bg-light" style="width: 25em; border: none;">
+                  <img src="https://s3.amazonaws.com/utep-uploads/wp-content/uploads/sparkle-box/2021/05/10102450/Mentor-mentee-500x281.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+                <div class="card bg-light" style="width: 25em; border: none;" >
+                  <img src="https://s3.amazonaws.com/utep-uploads/wp-content/uploads/sparkle-box/2021/05/10102450/Mentor-mentee-500x281.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                 
+                  </div>
+                </div>
+            </div>
+        
+        </p>
+        </div>
+       
+            
+        </div>
+      
+    
+   
+</section>
+<footer class="bg-light" id="footer-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+            <a href="https://open.spotify.com/show/4z5XasPn4K7b2hd6dBG65E?si=3382bf53cf804dff"  role="link"> <img src="https://w7.pngwing.com/pngs/476/841/png-transparent-computer-icons-spotify-podcast-spotify-app-icon-blue-angle-text.png" width="20px" height="20px"></a>
+            <a href="https://www.linkedin.com/company/pygrammers/"  role="link"> <img src="https://w7.pngwing.com/pngs/602/665/png-transparent-in-icon-social-media-linkedin-computer-icons-linkedin-blue-text-trademark-thumbnail.png" width="30px" height="25px"></a>
+            <a href="https://web.telegram.org/z/" role="link"><img src="https://w7.pngwing.com/pngs/224/500/png-transparent-telegram-logo-computer-icons-others-miscellaneous-blue-angle.png" width="26px" height="20px"> </a>
+            <a href="https://instagram.com/pygrammers?utm_medium=copy_link"> <img src="https://www.pngitem.com/pimgs/m/82-821814_transparent-ig-png-blue-instagram-icon-png-png.png" width="20px" height="20px">  </a>
+            
+                Pygrammers
+            
+        </div>
+  
+      </div>
+  
+    </div>
+  </footer>
+
+    
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
